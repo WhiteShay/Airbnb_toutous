@@ -5,3 +5,32 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+=begin 5.times do
+  city = City.create!(name: Faker::Address.city )
+end
+
+10.times do
+  dog = Dog.create!(name: Faker::Dog.name, city_id: rand(1..5))
+  dogsitter = Dogsitter.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, city_id: rand(1..5))
+end 
+=end
+
+=begin 30.times do
+  dog = Dog.find(rand(1..10))
+  dogsitter = Dogsitter.find(rand(1..10))
+  if dog.city_id == dogsitter.city_id
+    stroll = Stroll.create!(appen: true)
+  end
+end
+=end
+
+
+
+
+
+
+
+
